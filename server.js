@@ -11,12 +11,12 @@ app.post('/usuarios', (req, res) => {
     
     users.push(req.body)
 
-    res.send('Ok, post')
+    res.status(201).json(req.body)
 });
 
 //responde com um json com todos os usuarios, rota de listagem 
 app.get('/usuarios', (req, res) => {
-            res.json(users)
+            res.status(200).json(users)
 
 });
 
